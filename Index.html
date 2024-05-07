@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon Karakus Website</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/6e55b363ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-------------------------------------------------header--------------------------------------->
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="WebsiteImages/namelogo.png" class="logo ">
+            <ul id="sideMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#service">Skill Set</a></li>
+                <li><a href="#contact">Resume/Contact</a></li>
+                <li><a href="https://github.com/jonkarakus" target="_blank">GitHub</a>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Electrical and Computer Engineer</p>
+            <h1>Hi, I'm <span>Jon Karakus</span> <br>a recent engineering graduate <br> eager to kickstart start my career!</h1>
+            <h2><br><br>Please scroll or select a category on the top right to learn more about me<h2>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------about---------------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutCol1">
+                <img src="WebsiteImages/ImageJonWeb.png">
+            </div>
+            <div class="aboutCol2">
+                <h1 class="subtitle">About Me</h1>
+                <h2 class="aboutDescription">I am excited to pursue a career as an engineer in tech! Currently, I am working on publishing conference and journal research papers on topics regarding Supervised 
+                    Machine Learning and Data Mining for speech. I am passionate about emerging technologies worldwide as well as market trends.
+                    In my free time, I enjoy playing basketball and the piano, while always seeking to gain new and enriching experiences.<br> <br>
+                    Please enjoy my website!
+                </h2>
+                <div class="tabTitles">
+                     <p class="tabLinks activeLink" onclick="opentab('experience')">Experience</p>
+                     <p class="tabLinks" onclick="opentab('education')">Education</p>
+                     <p class="tabLinks" onclick="opentab('skills')">Skills</p>
+                </div>
+                <div class="tabContents activeTab" id="experience">
+                    <ul>
+                        <li><span>2024</span><br>Machine Learning Researcher: Working on Supervised Learning and Datamining for speech<br>&nbsp;&rarr; Supervised by Professor Saeed Gazor</li>
+                        <li><span>2023</span><br>Engineering Specialist Intern at Thermo Fisher Scientific <br>&nbsp;&rarr; Equipment Engineering Team</li>
+                        <li><span>2022</span><br>Smart Home Device project</li>
+                        <li><span>2021</span><br>Embedded System Engineer Intern at World Star Tech</li>
+                        <li><span>2020</span><br>Embedded Software Engineer Intern at World Star Tech</li>
+                    </ul>
+                </div>
+                <div class="tabContents" id="education">
+                    <ul>
+                        <li><span>Queen's University</span><br> Hons. BASc, Electrical and Computer Engineering (ECE)</li>
+                    </ul>
+                </div>
+                
+                <div class="tabContents" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>C++, Python, Java, C, MATLAB, SQL, Dart, HTML, CSS, NIOS II, VHDL</li>
+                        <li><span>Technologies</span><br>Scikit, Numpy, TensorFlow, Keras, Git, SourceTree, Android Studio, JIRA, Power BI</li>
+                        <li><span>CAD Tools</span><br>KiCAD, Electric, LTspice, PSIM, SolidWorks, AutoCAD, Sketch</li>
+                        <li><span>Lab Equipment</span><br>Oscilloscope, Multimeter, Function Generator, Soldering, Laser Marker, 3-D printer</li>
+                        <li><span>Dev Boards</span><br>Arduino, ESP32, STM32f4-Discovery, Altera DE0, Raspberry Pi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div> 
+
+ <!-----------------------------------------------Portfolio------------------------------------------------>
+<div id="projects">
+    <div class="container">
+        <div class="subtitle">
+            <h1>My Projects</h1>
+            <h2><br><br>Hover over and click the link to learn more about my projects!</h2>
+        </div>
+        <div class="workList">
+            <div class="work">
+                <img src="WebsiteImages/machine-learning-pillar-page-overview.png"> 
+                <div class="layer">
+                    <h3>Speech Emotion Recognition using Machine Learning</h3>
+                    <p>• Researching supervised learning and data mining (Python) for audio datasets. <br> 
+                   <br>• Conference paper submitted, journal paper to be submitted.<br>
+                   <br>• Click link for sample code using SVM </p>
+                    <a href="https://github.com/jonkarakus/MachineLearning-SpeechEmotionRecognition" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work"> 
+                <img src="WebsiteImages/DSPimageWeb.png">
+                <div class="layer"> 
+                    <h3>Signal Processing</h3>
+                    <p>• Collection of Signal Processing scripts developed in MATLAB</p>
+                    <a href="https://github.com/jonkarakus/DSPscripts" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/LogicGAtes.png"> 
+                <div class="layer"> 
+                    <h3>Logic Gates</h3>
+                    <p>• Designed and tested various logic gates for performance.</p>
+                    <a href="WebsiteImages/451LogicGates.pdf" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/Ballbeam.png"> 
+                <div class="layer">
+                    <h3>Control Systems: Ball and Beam</h3>
+                    <p>• Programmed ball to balance on beam, maintaining steady state for 4 seconds before being displaced 4cm and 
+                    returning to steady state within a 2 second settling time. <br> <br>(Click for a cool video)</p>
+                    <a href="https://www.youtube.com/watch?v=QpFm1wKGUZE&ab_channel=JonKarakus" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/WebBJT.png">
+                <div class="layer">
+                    <h3>Colpits Oscillator</h3>
+                    <p>• Designed, simulated, and constructed a Colpitts Oscillator using BJTs, with an Op-Amp as a buffer.</p>
+                    <a href="WebsiteImages/OscillatorsLab.pdf" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/MechCaar.png">  
+                <div class="layer">
+                    <h3>Autonomous Car</h3>
+                    <p>• Prototyped a self-driving car to complete randomly designed courses using a combination of 6 sensors and 2 servo motors.
+                        <br> <br>(Click for a cool video)
+                    </p>
+                    <a href="https://youtu.be/dYgyBRYzgh8" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div> 
+            <div class="work">
+                <img src="WebsiteImages/SmartPotPlant.png"> 
+                <div class="layer">
+                    <h3>SmartPot</h3>
+                    <p>• Prototyped a plant pot with self-watering and sensor monitoring capabilities.<br> <br>
+                    • Used a Raspberry Pi camera module to host a web server, displaying picture time-lapse of plant.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/IconApp.png"> 
+                <div class="layer">
+                    <h3>Queens Engineering App</h3>
+                    <p>• Developed an app for Queens students to request lab and study equipment, and reserve rooms. <br><br>
+                    • Connected to a MySQL database to update inventory count and display active staff members.</p>
+                    <a href="https://github.com/iConApp-F/iConApp" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="WebsiteImages/Jon Karakus_Resume (Web).pdf" download class="btn">Download Resume</a>
+    </div>
+</div>
+
+ <!-----------------------------------------------Skill set------------------------------------------------>
+<div id="service">
+    <div class="container">
+        <h1 class="subtitle">Skill Set</h1>
+            <div class="serviceList">
+                <div>
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>Machine Learning</h2>
+                    <p>Researching supervised learning and data mining for audio datasets. Submitted an IEEE conference paper and preparing to submit a journal paper.</p>
+                    <a>Experience with dataset collection, SVMs, Cross-Validation, Decision Trees, and CNNs </a>
+                    <a>Knowledge of Transformers and HNNS</a>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Embedded Systems</h2>
+                    <p>5+ years of experience in Embedded Systems through internships, course work and personal projects.</p>
+                    <a>Experience includes working with various dev-boards and sensors; using I2C, SPI, JTAG, and UART interfaces.</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>Software</h2>
+                    <p>6+ years of experience in Software Development through internships, coursework, and personal projects.</p>
+                    <a>Extensive experience with Python, C++, Java, with proficiency in several other programming languages.</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Hardware</h2>
+                    <p>4+ years of experience with Hardware Systems through internships and course work.</p>
+                    <a>Experience with PCB Design, Breadboard Prototyping, and Digital Integrated Circuits.</a>
+                </div>
+            </div>
+
+    </div>
+</div>
+ 
+ <!-----------------------------------------------Contact------------------------------------------------>
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contactLeft">
+                <h1 class="subTitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> &nbsp; jkarakus@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> &nbsp; (647) - 272 - 5477 </p>
+                <div class="socialIcons">
+                    <a href="https://www.linkedin.com/in/jon-karakus/" target="_blank"> Connect With Me! <i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="WebsiteImages/Jon Karakus_Resume (Web).pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contactRight">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Enjoy my Personal Website  <i class="fa-solid fa-face-smile"></i></p>
+    </div>
+ </div>
+
+<!------------------------------------------------JavaScript-------------------------------------------->
+
+ <script>
+
+    var tablinks = document.getElementsByClassName("tabLinks");
+    var tabcontents = document.getElementsByClassName("tabContents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("activeLink");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("activeTab");
+        }
+        event.currentTarget.classList.add("activeLink");
+        document.getElementById(tabname).classList.add("activeTab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sideMenu");
+
+    function openMenu(){
+         sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+         sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbe0dhtXi_p-1LQFOAqkuB_xmP7dXNq5kzoMLsVxfF9mraHMNOd62wGPPkEcrbokE/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent!"
+            setInterval(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
