@@ -42,10 +42,11 @@
             </div>
             <div class="aboutCol2">
                 <h1 class="subtitle">About Me</h1>
-                <h2 class="aboutDescription">I am excited to pursue a career as an engineer in tech! Currently, I am working on publishing conference and journal research papers on topics regarding Supervised 
-                    Machine Learning and Data Mining for speech. I am passionate about emerging technologies worldwide as well as market trends.
-                    In my free time, I enjoy playing basketball and the piano, while always seeking to gain new and enriching experiences.<br> <br>
-                    Please enjoy my website!
+                <h2 class="aboutDescription">I am excited to pursue a career in engineering, where innovation is limitless! Currently, I am working on submitting research papers on Supervised Machine Learning and Data Mining 
+                    for speech to an IEEE conference and journal. I am also interested in global technology trends, which often bring new opportunities and challenges.
+                    <br><br>Outside of work, I enjoy playing basketball and the piano, which allow me to unwind. Whenever possible, I enjoy traveling and exploring different cultures, which broadens my views and insights.  
+                    <br>
+                
                 </h2>
                 <div class="tabTitles">
                      <p class="tabLinks activeLink" onclick="opentab('experience')">Experience</p>
@@ -206,7 +207,7 @@
     <div class="container">
         <div class="row">
             <div class="contactLeft">
-                <h1 class="subTitle">Contact Me</h1>
+                <h1 class="subtitle">Contact Me</h1>
                 <p><i class="fa-solid fa-envelope"></i> &nbsp; jkarakus@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i> &nbsp; (647) - 272 - 5477 </p>
                 <div class="socialIcons">
@@ -220,7 +221,7 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
-                </form>
+                </form> 
                 <span id="msg"></span>
             </div>
         </div>
@@ -242,12 +243,13 @@
             tablink.classList.remove("activeLink");
         }
         for (tabcontent of tabcontents){
-            tabcontent.classList.remove("activeTab");
+            tabcontent.classList.remove("activeTab");  
         }
         event.currentTarget.classList.add("activeLink");
         document.getElementById(tabname).classList.add("activeTab");
     }
 </script>
+
 <script>
     var sidemenu = document.getElementById("sideMenu");
 
@@ -259,20 +261,20 @@
     }
 </script>
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbe0dhtXi_p-1LQFOAqkuB_xmP7dXNq5kzoMLsVxfF9mraHMNOd62wGPPkEcrbokE/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxblPptwpPLV0m0jn6W-PGtY6j8hZIsJo90ABwyuznXSBgfLhEF-Kf8ttL5rerRWlIv/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
+        .then(response =>{
             msg.innerHTML = "Message Sent!"
-            setInterval(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
+            setTimeout(function(){
+            msg.innerHTML = ""
+             },5000)
+             form.reset()
+         })     
         .catch(error => console.error('Error!', error.message))
     })
 </script>
