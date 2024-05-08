@@ -88,6 +88,7 @@ nav ul li a:hover::after{
     flex-basis: 35%;
 }
 .aboutCol1 img{
+    margin-top: 40px;
     width: 100%;
     border-radius: 15px; 
 }
@@ -100,7 +101,7 @@ nav ul li a:hover::after{
     color: #ffffff;
 }   
 .aboutDescription {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 450; 
 }
 
@@ -110,7 +111,7 @@ nav ul li a:hover::after{
 }
 .tabLinks{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -134,7 +135,8 @@ nav ul li a:hover::after{
 }
 .tabContents ul li span{
     color: #3174fb;
-    font-size: 18px; 
+    font-size: 20px;
+    font-weight:500; 
 }
 .tabContents{
     display: none; 
@@ -196,6 +198,7 @@ nav ul li a:hover::after{
 }
 .subtitle h2{
     font-size: 20px;
+    font-weight: 400; 
 }
 .workList{
     display: grid;
@@ -399,4 +402,5 @@ nav .fa-solid{
     color: #61b752;
     margin-top: -40px;
     display: block;
+    font-size: 20px;
 }
