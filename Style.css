@@ -248,7 +248,7 @@ nav.scrolled {
     height: 260px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 81%;
     border: 3px solid var(--border);
     box-shadow: 0 8px 40px rgba(37, 99, 235, 0.1);
     display: block;
