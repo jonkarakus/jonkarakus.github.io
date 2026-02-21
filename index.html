@@ -4,283 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="A8tdPju1iTcE7LH5CYvmjtDY_O66QlQWgptGLIWYJ3A" />
-    <title>Jon Karakus Website</title>
+    <title>Jon Karakus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <script src="https://kit.fontawesome.com/6e55b363ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-------------------------------------------------header--------------------------------------->
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="WebsiteImages/namelogo.png" class="logo ">
-            <ul id="sideMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#service">Skill Set</a></li>
-                <li><a href="#contact">Resume/Contact</a></li>
-                <li><a href="https://github.com/jonkarakus" target="_blank">GitHub</a>
-                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Electrical and Computer Engineering Graduate</p>
-            <h1>Hi, I'm <span>Jon Karakus</span> <br>a SWE at WSTech <br> </h1>
-            <h2><br><br>Please scroll or select a category on the top right to learn more about me<h2>
-        </div>
-    </div>
+<!-- NAV -->
+<nav id="nav">
+    <a href="#hero" class="nav-logo">Jon <span>Karakus</span></a>
+    <ul class="nav-links">
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/jonkarakus" target="_blank">GitHub ↗</a></li>
+    </ul>
+    <i class="fa-solid fa-bars nav-hamburger" onclick="openMobile()"></i>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <i class="fa-solid fa-xmark mobile-close" onclick="closeMobile()"></i>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="https://github.com/jonkarakus" target="_blank">GitHub ↗</a>
 </div>
 
-<!----------------------------------------------------about---------------------------------------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="aboutCol1">
-                <img src="WebsiteImages/ImageJonWeb.png">
-            </div>
-            <div class="aboutCol2">
-                <h1 class="subtitle">About Me</h1>
-                <h2 class="aboutDescription">I am excited to start a career in engineering, where innovation is limitless. My final year capstone project involved using Supervised Machine Learning and Data Mining to
-                    improve speech recognition technologies. I'm currently expanding this research and publishing my findings in an IEEE research paper. This work sharpens my skills and keeps me updated with the 
-                    latest in machine learning.
-                    <br><br>I'm also very interested in global technology trends, as they often bring new opportunities and challenges. Outside of work, I enjoy playing basketball and the piano, which helps me to
-                    learn from diverse experiences. Additionally, I love to travel and explore different cultures, broadening my views and insights. 
-                    <br>
-                
-                </h2>
-                <div class="tabTitles">
-                     <p class="tabLinks activeLink" onclick="opentab('experience')">Experience</p>
-                     <p class="tabLinks" onclick="opentab('education')">Education</p>
-                     <p class="tabLinks" onclick="opentab('skills')">Skills</p>
-                </div>
-                <div class="tabContents activeTab" id="experience">
-                    <ul>
-                        <li><span>2025</span><br>Software Engineer at World Star Tech <br>&nbsp;&rarr; Computer Vision, Robotics and Camera</li>
-                        <li><span>2024</span><br>Hardware Specialist at Contextual AI <br>&nbsp;&rarr; Data and LLM Eval</li>
-                        <li><span>2024</span><br>Machine Learning Researcher: Working on Supervised Learning and Datamining for speech<br>&nbsp;&rarr; Supervised by Professor Saeed Gazor</li>
-                        <li><span>2023</span><br>Engineering Specialist Intern at Thermo Fisher Scientific <br>&nbsp;&rarr; Equipment Engineering Team</li>
-                        <li><span>2022</span><br>Embedded System Engineer Intern at World Star Tech</li>
-                        <li><span>2021</span><br>Software Engineer Intern at World Star Tech</li>
-                    </ul>
-                </div>
-                <div class="tabContents" id="education">
-                    <ul>
-                        <li><span>Queen's University</span><br> Hons. BASc, Electrical and Computer Engineering (ECE)</li>
-                    </ul>
-                </div>
-                
-                <div class="tabContents" id="skills">
-                    <ul>
-                        <li><span>Languages</span><br>C++, Python, Java, C, MATLAB, SQL, HTML, CSS, NIOS II, VHDL</li>
-                        <li><span>Technologies</span><br>PyTorch, Scikit, Numpy, TensorFlow, Keras, Git, Android Studio, JIRA, Power BI</li>
-                        <li><span>CAD Tools</span><br>KiCAD, Electric, LTspice, PSIM, SolidWorks, AutoCAD, Sketch</li>
-                        <li><span>Lab Equipment</span><br>Oscilloscope, Multimeter, Function Generator, Soldering, Laser Marker, 3-D printer</li>
-                        <li><span>Dev Boards</span><br>Arduino, ESP32, STM32f4-Discovery, Altera DE0, Raspberry Pi, ATTO</li>
-                    </ul>
-                </div>
+<!-- HERO -->
+<section id="hero">
+    <canvas id="laser-canvas"></canvas>
+
+    <div class="hero-inner">
+
+        <!-- Left: bio -->
+        <div class="hero-left">
+            <p class="hero-label">// ECE Graduate &nbsp;·&nbsp; Software Engineer</p>
+            <h1 class="hero-name">Hi, I'm Jon Karakus.</h1>
+            <p class="hero-bio">
+                I'm a <strong>Software Engineer at World Star Tech</strong>, working on computer vision, robotics, and camera systems. I studied Electrical and Computer Engineering at <strong>Queen's University</strong> and I'm passionate about the intersection of <strong>machine learning</strong>, signal processing, and hardware that actually ships.
+                <br><br>
+                My research in speech emotion recognition led to a published <strong>IEEE conference paper</strong>, with a journal paper in the works.
+            </p>
+            <div class="hero-links">
+                <a href="https://www.linkedin.com/in/jon-karakus/" target="_blank" class="btn-outline">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="#contact" class="btn-outline">Get in Touch</a>
             </div>
         </div>
-    </div>
- </div> 
 
- <!-----------------------------------------------Portfolio------------------------------------------------>
-<div id="projects">
-    <div class="container">
-        <div class="subtitle">
-            <h1>My Projects</h1>
-            <h2><br><br>Hover over and click the link to learn more about my projects!</h2>
-        </div>
-        <div class="workList">
-            <div class="work">
-                <img src="WebsiteImages/machine-learning-pillar-page-overview.png"> 
-                <div class="layer">
-                    <h3>Speech Emotion Recognition using Machine Learning</h3>
-                    <p>• Researching supervised learning and data mining (Python) for audio datasets. <br> 
-                   <br>• Conference paper submitted, journal paper to be submitted.<br>
-                   <br>• Click link for sample code using SVM </p>
-                    <a href="https://github.com/jonkarakus/MachineLearning-SpeechEmotionRecognition" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work"> 
-                <img src="WebsiteImages/DSPimageWeb.png">
-                <div class="layer"> 
-                    <h3>Signal Processing</h3>
-                    <p>• Collection of Signal Processing scripts developed in MATLAB</p>
-                    <a href="https://github.com/jonkarakus/DSPscripts" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="WebsiteImages/LogicGAtes.png"> 
-                <div class="layer"> 
-                    <h3>Logic Gates</h3>
-                    <p>• Designed and tested various logic gates for performance.</p>
-                    <a href="WebsiteImages/451LogicGates.pdf" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="WebsiteImages/Ballbeam.png"> 
-                <div class="layer">
-                    <h3>Control Systems: Ball and Beam</h3>
-                    <p>• Programmed ball to balance on beam, maintaining steady state for 4 seconds before being displaced 4cm and 
-                    returning to steady state within a 2 second settling time. <br> <br>(Click for a cool video)</p>
-                    <a href="https://www.youtube.com/watch?v=QpFm1wKGUZE&ab_channel=JonKarakus" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="WebsiteImages/WebBJT.png">
-                <div class="layer">
-                    <h3>Colpits Oscillator</h3>
-                    <p>• Designed, simulated, and constructed a Colpitts Oscillator using BJTs, with an Op-Amp as a buffer.</p>
-                    <a href="WebsiteImages/OscillatorsLab.pdf" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="WebsiteImages/MechCaar.png">  
-                <div class="layer">
-                    <h3>Autonomous Car</h3>
-                    <p>• Prototyped a self-driving car to complete randomly designed courses using a combination of 6 sensors and 2 servo motors.
-                        <br> <br>(Click for a cool video)
-                    </p>
-                    <a href="https://youtu.be/dYgyBRYzgh8" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div> 
-            <div class="work">
-                <img src="WebsiteImages/SmartPotPlant.png"> 
-                <div class="layer">
-                    <h3>SmartPot</h3>
-                    <p>• Prototyped a plant pot with self-watering and sensor monitoring capabilities.<br> <br>
-                    • Used a Raspberry Pi camera module to host a web server, displaying picture time-lapse of plant.</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="WebsiteImages/IconApp.png"> 
-                <div class="layer">
-                    <h3>Queens Engineering App</h3>
-                    <p>• Developed an app for Queens students to request lab and study equipment, and reserve rooms. <br><br>
-                    • Connected to a MySQL database to update inventory count and display active staff members.</p>
-                    <a href="https://github.com/iConApp-F/iConApp" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
+        <!-- Right: photo + socials -->
+        <div class="hero-right">
+            <img src="WebsiteImages/ImageJonWeb.png" alt="Jon Karakus">
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/jon-karakus/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> /in/jon-karakus
+                </a>
+                <a href="https://github.com/jonkarakus" target="_blank">
+                    <i class="fa-brands fa-github"></i> github.com/jonkarakus
+                </a>
+                <a href="mailto:jkarakus@gmail.com">
+                    <i class="fa-solid fa-envelope"></i> jkarakus@gmail.com
+                </a>
+                <a>
+                    <i class="fa-solid fa-location-dot"></i> Toronto, ON · Canada
+                </a>
             </div>
         </div>
-        <a href="WebsiteImages/Jon Karakus_Resume (Web).pdf" download class="btn">Download Resume</a>
-    </div>
-</div>
-
- <!-----------------------------------------------Skill set------------------------------------------------>
-<div id="service">
-    <div class="container">
-        <h1 class="subtitle">Skill Set</h1>
-            <div class="serviceList">
-                <div>
-                    <i class="fa-solid fa-brain"></i>
-                    <h2>Machine Learning</h2>
-                    <p>Researching supervised learning and data mining for audio datasets. Submitted an IEEE conference paper and preparing to submit a journal paper.</p>
-                    <a>Experience with dataset collection, SVMs, Cross-Validation, Decision Trees, and CNNs </a>
-                    <a>Knowledge of Transformers and HNNS</a>
-
-                </div>
-                <div>
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h2>Embedded Systems</h2>
-                    <p>5+ years of experience in Embedded Systems through internships, course work and personal projects.</p>
-                    <a>Experience includes working with various dev-boards and sensors; using I2C, SPI, JTAG, and UART interfaces.</a>
-                </div>
-                <div>
-                    <i class="fa-sharp fa-solid fa-code"></i>
-                    <h2>Software</h2>
-                    <p>6+ years of experience in Software Development through internships, coursework, and personal projects.</p>
-                    <a>Extensive experience with Python, C++, Java, with proficiency in several other programming languages.</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-microchip"></i>
-                    <h2>Hardware</h2>
-                    <p>4+ years of experience with Hardware Systems through internships and course work.</p>
-                    <a>Experience with PCB Design, Breadboard Prototyping, and Digital Integrated Circuits.</a>
-                </div>
-            </div>
 
     </div>
-</div>
- 
- <!-----------------------------------------------Contact------------------------------------------------>
- <div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contactLeft">
-                <h1 class="subtitle">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i> &nbsp; jkarakus@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> &nbsp; (647) - 272 - 5477 </p>
-                <div class="socialIcons">
-                    <a href="https://www.linkedin.com/in/jon-karakus/" target="_blank"> Connect With Me! <i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="WebsiteImages/Jon Karakus_Resume (Web).pdf" download class="btn btn2">Download Resume</a>
+
+    <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        Scroll to explore
+    </div>
+</section>
+
+<!-- CONTACT -->
+<div class="divider"></div>
+<div class="section-wrap" id="contact">
+    <p class="section-tag reveal">// contact</p>
+    <h2 class="section-title reveal">Get in Touch</h2>
+    <div class="contact-grid">
+
+        <div class="contact-intro reveal">
+            <h3>Let's connect.</h3>
+            <p>Whether you're interested in collaborating on research, have an engineering challenge worth tackling, or just want to talk ML and hardware — I'd love to hear from you.</p>
+            <div class="contact-links">
+                <a href="mailto:jkarakus@gmail.com">
+                    <i class="fa-solid fa-envelope"></i> jkarakus@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/jon-karakus/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> /in/jon-karakus
+                </a>
+                <a href="https://github.com/jonkarakus" target="_blank">
+                    <i class="fa-brands fa-github"></i> github.com/jonkarakus
+                </a>
             </div>
-            <div class="contactRight">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form> 
+        </div>
+
+        <div class="contact-form-wrap reveal">
+            <form class="contact-form" name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn-solid">Send Message →</button>
                 <span id="msg"></span>
-            </div>
+            </form>
         </div>
+
     </div>
-    <div class="footer">
-        <p>Enjoy my Personal Website  <i class="fa-solid fa-face-smile"></i></p>
-    </div>
- </div>
+</div>
 
-<!------------------------------------------------JavaScript-------------------------------------------->
+<!-- FOOTER -->
+<div class="divider"></div>
+<footer>
+    <span>© 2025 Jon Karakus</span>
+    <a href="https://github.com/jonkarakus" target="_blank">github.com/jonkarakus ↗</a>
+</footer>
 
- <script>
-
-    var tablinks = document.getElementsByClassName("tabLinks");
-    var tabcontents = document.getElementsByClassName("tabContents");
-
-    function opentab(tabname){
-        for (tablink of tablinks){
-            tablink.classList.remove("activeLink");
-        }
-        for (tabcontent of tabcontents){
-            tabcontent.classList.remove("activeTab");  
-        }
-        event.currentTarget.classList.add("activeLink");
-        document.getElementById(tabname).classList.add("activeTab");
-    }
-</script>
-
+<!-- JAVASCRIPT -->
 <script>
-    var sidemenu = document.getElementById("sideMenu");
 
-    function openMenu(){
-         sidemenu.style.right = "0";
+// ── LASER CANVAS ──
+(function () {
+    const canvas = document.getElementById('laser-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H;
+
+    function resize() {
+        W = canvas.width = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
     }
-    function closeMenu(){
-         sidemenu.style.right = "-200px";
+    resize();
+    window.addEventListener('resize', resize);
+
+    const VX = 0.5, VY = 0.38, H_LINES = 14, V_LINES = 22;
+    let beams = [], frame = 0;
+
+    function spawnBeam() {
+        beams.push({
+            type: Math.random() > 0.5 ? 'h' : 'v',
+            t: Math.random() * 0.7 + 0.15,
+            x: Math.random(),
+            life: 0,
+            maxLife: 90 + Math.random() * 60,
+            color: Math.random() > 0.5 ? 'blue' : 'red'
+        });
     }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxblPptwpPLV0m0jn6W-PGtY6j8hZIsJo90ABwyuznXSBgfLhEF-Kf8ttL5rerRWlIv/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response =>{
-            msg.innerHTML = "Message Sent!"
-            setTimeout(function(){
-            msg.innerHTML = ""
-             },5000)
-             form.reset()
-         })     
-        .catch(error => console.error('Error!', error.message))
-    })
+
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
+        const vx = W * VX, vy = H * VY;
+
+        for (let i = 0; i < H_LINES; i++) {
+            const t = Math.pow((i + 1) / (H_LINES + 1), 0.55);
+            const y = vy + (H * 1.1 - vy) * t;
+            const xl = vx - W * 0.75 * t, xr = vx + W * 0.75 * t;
+            ctx.beginPath();
+            ctx.moveTo(xl, y);
+            ctx.lineTo(xr, y);
+            ctx.strokeStyle = i < 2 ? 'rgba(37,99,235,0.11)' : 'rgba(37,99,235,0.05)';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+        }
+
+        for (let i = 0; i < V_LINES; i++) {
+            const t = i / (V_LINES - 1);
+            const bx = W * -0.15 + t * W * 1.3;
+            ctx.beginPath();
+            ctx.moveTo(vx, vy);
+            ctx.lineTo(bx, H * 1.05);
+            ctx.strokeStyle = 'rgba(37,99,235,0.045)';
+            ctx.lineWidth = 0.7;
+            ctx.stroke();
+        }
+
+        if (frame % 45 === 0 && beams.length < 4) spawnBeam();
+        beams = beams.filter(b => b.life < b.maxLife);
+
+        for (const b of beams) {
+            const alpha = Math.sin((b.life / b.maxLife) * Math.PI) * 0.65;
+            const c = b.color === 'blue' ? '37,99,235' : '225,29,72';
+
+            if (b.type === 'h') {
+                const tc = Math.pow(b.t, 0.55);
+                const by = vy + (H * 1.1 - vy) * tc;
+                const xl = vx - W * 0.75 * tc, xr = vx + W * 0.75 * tc;
+                const g = ctx.createLinearGradient(xl, by, xr, by);
+                g.addColorStop(0, `rgba(${c},0)`);
+                g.addColorStop(0.5, `rgba(${c},${alpha})`);
+                g.addColorStop(1, `rgba(${c},0)`);
+                ctx.beginPath(); ctx.moveTo(xl, by); ctx.lineTo(xr, by);
+                ctx.strokeStyle = g; ctx.lineWidth = 1.8; ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(xl, by); ctx.lineTo(xr, by);
+                ctx.strokeStyle = `rgba(${c},${alpha * 0.08})`; ctx.lineWidth = 9; ctx.stroke();
+            } else {
+                const bx = vx + (b.x - 0.5) * W * 1.3;
+                const g = ctx.createLinearGradient(bx, vy, bx, H);
+                g.addColorStop(0, `rgba(${c},0)`);
+                g.addColorStop(0.4, `rgba(${c},${alpha * 0.5})`);
+                g.addColorStop(1, `rgba(${c},0)`);
+                ctx.beginPath(); ctx.moveTo(bx, vy); ctx.lineTo(bx, H * 1.05);
+                ctx.strokeStyle = g; ctx.lineWidth = 1.4; ctx.stroke();
+            }
+            b.life++;
+        }
+
+        frame++;
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
+
+// ── NAV SCROLL ──
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── MOBILE MENU ──
+function openMobile() { document.getElementById('mobileMenu').classList.add('open'); }
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+// ── REVEAL ON SCROLL ──
+const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('visible'), i * 70);
+            observer.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── CONTACT FORM ──
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxblPptwpPLV0m0jn6W-PGtY6j8hZIsJo90ABwyuznXSBgfLhEF-Kf8ttL5rerRWlIv/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('msg');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+            msg.innerHTML = 'Message sent!';
+            setTimeout(() => msg.innerHTML = '', 5000);
+            form.reset();
+        })
+        .catch(err => console.error(err));
+});
+
 </script>
 </body>
 </html>

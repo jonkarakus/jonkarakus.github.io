@@ -1,4 +1,4 @@
-/* ── CSS VARIABLES ── */
+/* ── VARIABLES ── */
 :root {
     --bg: #ffffff;
     --bg2: #f7f8fc;
@@ -39,7 +39,9 @@ body {
 /* ── NAV ── */
 nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -59,10 +61,10 @@ nav.scrolled {
 .nav-logo {
     font-family: var(--display);
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: var(--text);
     text-decoration: none;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .nav-logo span {
@@ -134,17 +136,6 @@ nav.scrolled {
     color: var(--muted);
 }
 
-/* ── LASER CANVAS ── */
-#laser-canvas {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
 /* ── HERO ── */
 #hero {
     position: relative;
@@ -156,9 +147,20 @@ nav.scrolled {
     background: var(--bg);
 }
 
+#laser-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 .hero-inner {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -182,18 +184,13 @@ nav.scrolled {
 
 .hero-name {
     font-family: var(--display);
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: 1.6rem;
     font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     color: var(--text);
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.4rem;
     opacity: 0;
     animation: fadeUp 0.6s 0.35s ease forwards;
-}
-
-.hero-name .blue {
-    color: var(--primary);
 }
 
 .hero-bio {
@@ -214,7 +211,7 @@ nav.scrolled {
 .hero-links {
     display: flex;
     gap: 0.9rem;
-    margin-top: 2.2rem;
+    margin-top: 2rem;
     flex-wrap: wrap;
     opacity: 0;
     animation: fadeUp 0.6s 0.65s ease forwards;
@@ -280,8 +277,8 @@ nav.scrolled {
 }
 
 .hero-right img {
-    width: 190px;
-    height: 190px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -334,6 +331,7 @@ nav.scrolled {
     display: flex;
     align-items: center;
     gap: 0.7rem;
+    z-index: 1;
     opacity: 0;
     animation: fadeUp 0.6s 1.1s ease forwards;
 }
@@ -353,8 +351,6 @@ nav.scrolled {
 
 /* ── SECTION WRAPPER ── */
 .section-wrap {
-    position: relative;
-    z-index: 2;
     max-width: 1000px;
     margin: 0 auto;
     padding: 5.5rem 6%;
@@ -380,7 +376,7 @@ nav.scrolled {
 }
 
 /* ── CONTACT ── */
-.contact-form-grid {
+.contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
@@ -403,14 +399,13 @@ nav.scrolled {
     margin-bottom: 1.5rem;
 }
 
-.contact-detail-links {
+.contact-links {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-    margin-bottom: 2rem;
 }
 
-.contact-detail-links a {
+.contact-links a {
     font-family: var(--mono);
     font-size: 0.76rem;
     color: var(--muted);
@@ -421,12 +416,12 @@ nav.scrolled {
     transition: color 0.2s;
 }
 
-.contact-detail-links a i {
+.contact-links a i {
     color: var(--primary);
     width: 14px;
 }
 
-.contact-detail-links a:hover {
+.contact-links a:hover {
     color: var(--primary);
 }
 
@@ -465,10 +460,6 @@ nav.scrolled {
     min-height: 120px;
 }
 
-.submit-btn {
-    width: fit-content;
-}
-
 #msg {
     font-family: var(--mono);
     font-size: 0.76rem;
@@ -477,10 +468,9 @@ nav.scrolled {
 
 /* ── FOOTER ── */
 footer {
-    border-top: 1px solid var(--border);
-    padding: 1.8rem 6%;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 1.8rem 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -545,7 +535,7 @@ footer a:hover {
         justify-content: center;
     }
 
-    .contact-form-grid {
+    .contact-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
