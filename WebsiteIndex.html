@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon Karakus Website</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/6e55b363ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-------------------------------------------------header--------------------------------------->
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="WebsiteImages/namelogo.png" class="logo ">
+            <ul id="sideMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#service">Fields</a></li>
+                <li><a href="#contact">Resume/Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Electrical and Computer Engineer</p>
+            <h1>Hi, I'm <span>Jon K</span> <br>a student set to graduate in April 2024, <br> eager to kickstart start my career!</h1>
+            <h2><br><br>Please scroll to learn more about me<h2>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------about---------------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutCol1">
+                <img src="WebsiteImages/FakeMe.png">
+            </div>
+            <div class="aboutCol2">
+                <h1 class="subtitle">About Me</h1>
+                <p>I am looking to persue a career in either Embedded Systems, Software, or
+                    Hardware Engineering. I am passionate about emerging technologies wordwide and market trends. In my freetime, I enjoy 
+                    playing basketball and the piano, while always seeking to gain new and enriching experiences.<br> 
+                    Please enjoy my website!
+                </p>
+                <div class="tabTitles">
+                     <p class="tabLinks activeLink" onclick="opentab('education')">Education</p>
+                     <p class="tabLinks" onclick="opentab('experience')">Experience</p>
+                     <p class="tabLinks" onclick="opentab('skills')">Skills</p>
+                </div>
+                <div class="tabContents activeTab" id="education">
+                    <ul>
+                        <li><span>Queen's University</span><br>BASc, ECE (Electrical and Computer Engineering)</li>
+                    </ul>
+                </div>
+                <div class="tabContents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>Engineering Specialist Intern at Thermo Fisher Scientic</li>
+                        <li><span>2022</span><br>Smart Home Device project</li>
+                        <li><span>2021</span><br>Embedded System Engineer Intern at World Star Tech</li>
+                        <li><span>2020</span><br>Embedded Software Engineer Intern at World Star Tech</li>
+                    </ul>
+                </div>
+                <div class="tabContents" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>C++, Python, Java, C, MATLAB, SQL, Dart, HTML, CSS, NIOS II, VHDL</li>
+                        <li><span>Technologies</span><br>TensorFlow, GitHub, SourceTree, Android Studio, JIRA, Power BI</li>
+                        <li><span>CAD Tools</span><br>KiCAD, Electric, LTspice, PSIM, SOLIDWORKDS, AUTOCAD, Sketch</li>
+                        <li><span>Lab Equipment</span><br>Oscilloscope, Multimeter, Function Generator, Soldering, Laser Marker, 3-D printer</li>
+                        <li><span>Dev Boards</span><br>Arduino, ESP32, STM32f4-Discovery, Altera DEO, Raspberry Pi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>   
+ <!-----------------------------------------------Portfolio------------------------------------------------>
+<div id="projects">
+    <div class="container">
+        <div class="subtitle">
+            <h1>My Projects</h1>
+            <h2><br><br>Hover over to learn more about my projects</h2>
+        </div>
+        <div class="workList">
+            <div class="work">
+                <img src="WebsiteImages/machine-learning-pillar-page-overview.png"> 
+                <div class="layer">
+                    <h3>A.I. Emotion Recognition through Speech <br> (coming soon)</h3>
+                    <p> - Using Machine Learning Techniques to evaluate user emotion through speech. <br><br> 
+                     - Collected participant speech samples for dataset using appropriate research ethics practices.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/LogicGAtes.png"> 
+                <div class="layer"> 
+                    <h3>Logic Gates</h3>
+                    <p>- Designed and tested various logic gates for performance.</p>
+                    <a href="WebsiteImages/451LogicGates.pdf" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/Ballbeam.png"> 
+                <div class="layer">
+                    <h3>Control Systems: Ball and Beam</h3>
+                    <p>- Programmed ball to balance on beam (steady state) for 4 seconds before displacing a set 4cm and 
+                        reaching steady state under the desired settling time. <br>(Super cool video)</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/WebBJT.png">
+                <div class="layer">
+                    <h3>Colpits Oscillator</h3>
+                    <p>- Desinged, simulated, and construced a Colpitts Oscillator using BJTs and an OpAmp as a buffer.</p>
+                    <a href="WebsiteImages/OscillatorsLab.pdf" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/MechCaar.png">  
+                <div class="layer">
+                    <h3>Autonomous Car</h3>
+                    <p>- Protoyped a self driving car to complete randomly desinged courses.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div> 
+            <div class="work">
+                <img src="WebsiteImages/SmartPotPlant.png"> 
+                <div class="layer">
+                    <h3>SmartPot</h3>
+                    <p>- Prototyped a plant pot with self-watering and sensor monitoring capabilities.<br> <br>
+                    - Used Raspberry Pi camera module to host a web server displaying picture time-lapse of plant.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/IconApp.png"> 
+                <div class="layer">
+                    <h3>Queens Engineering App</h3>
+                    <p> - Developed an app for Queens students to request lab equipment, study equipment and book rooms. <br><br>
+                    - Connected to MySQL database to update inventrory count and display active members.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="WebsiteImages/JonKarakus_Resume.pdf" download class="btn">Download Resume</a>
+    </div>
+</div>
+ <!-----------------------------------------------Fields------------------------------------------------>
+<div id="service">
+    <div class="container">
+        <h1 class="subtitle">Fields</h1>
+            <div class="serviceList">
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Embedded Systems</h2>
+                    <p>4+ years working with Embedded Systems through internships, course work and personal projects.</p>
+                    <a>Experience includes working with various dev-boards and sensors; using I2C, SPI, JTAG, and UART interaces.  </a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>Software</h2>
+                    <p>5+ years working with Software through internships, course work and personal projects.</p>
+                    <a>Extensive experience in Python, C++, Java, with knowledge in several other programming languages.</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Hardware</h2>
+                    <p>3+ years working with Hardware Systems through internships and course work.</p>
+                    <a>Experience with PCB Design, Breadboard Prototyping, and Digital Integrated Circuits.</a>
+                </div>
+            </div>
+
+    </div>
+</div>
+ 
+ <!-----------------------------------------------Contact------------------------------------------------>
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contactLeft">
+                <h1 class="subTitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> &nbsp; jkarakus@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> &nbsp; (647) - 272 - 5477 </p>
+                <div class="socialIcons">
+                    <a href="https://www.linkedin.com/in/jon-karakus/" target="_blank"> Connect With Me! <i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="WebsiteImages/JonKarakus_Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contactRight">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>kjn
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Enjoy my Personal Website  <i class="fa-solid fa-face-smile"></i></p>
+    </div>
+ </div>
+
+<!------------------------------------------------JavaScript-------------------------------------------->
+
+ <script>
+
+    var tablinks = document.getElementsByClassName("tabLinks");
+    var tabcontents = document.getElementsByClassName("tabContents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("activeLink");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("activeTab");
+        }
+        event.currentTarget.classList.add("activeLink");
+        document.getElementById(tabname).classList.add("activeTab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sideMenu");
+
+    function openMenu(){
+         sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+         sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbe0dhtXi_p-1LQFOAqkuB_xmP7dXNq5kzoMLsVxfF9mraHMNOd62wGPPkEcrbokE/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent!"
+            setInterval(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
