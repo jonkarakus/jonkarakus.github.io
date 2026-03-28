@@ -266,6 +266,7 @@ const msg = document.getElementById('msg');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
+    const formData = new FormData(form); // capture BEFORE reset
     msg.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message sent!';
     msg.style.opacity = '1';
     form.reset();
@@ -273,7 +274,7 @@ form.addEventListener('submit', e => {
         msg.style.opacity = '0';
         setTimeout(() => msg.innerHTML = '', 400);
     }, 4000);
-    fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+    fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
         .catch(err => console.error(err));
 });
 
